@@ -16,13 +16,25 @@ This is the 2025 Spring PolyU COMP4423 Computer Vision Project. This project add
 ## Repository Structure
 
 ```
-COMP4423_Project/
-├── Task1_cycleGAN.ipynb           # CycleGAN implementation and training
-├── Task2_Yolo_datasets.ipynb      # Dataset preparation for object detection
-├── Task2_finetune+TTA.ipynb       # YOLO fine-tuning and test-time adaptation
-├── requirements.txt               # Dependencies
-├── README.md                      # This file
-└── report.pdf                     # Project report (not included in repository)
+Synth2Det/
+├── Source Code/
+│   ├── Task1_cycleGAN.ipynb           # CycleGAN implementation and training
+│   ├── Task2_Yolo_datasets.ipynb      # Dataset preparation for object detection
+│   ├── Task2_finetune+TTA.ipynb       # YOLO fine-tuning and test-time adaptation
+│   └── requirements.txt               # Dependencies
+├── assets/
+│   ├── modified_cyclegan.png          # CycleGAN architecture diagram
+│   ├── yolov11-strategies-final-clean.svg  # Fine-tuning pipeline visualization
+│   ├── task1_result.png               # CycleGAN results visualization
+│   └── task2_results.png              # YOLO detection results comparison
+├── Datasets/                          # Datasets directory
+│   └── declaration.md/                # The Google Drive links
+├── Report/                            # Individual report for 
+│   ├── 22097845d_YuhangDAI.pdf/       # DAI Yuhang's report
+│   ├── 22102947d_ZhaoyuCUI.pdf/       # CUI Zhaoyu's report
+│   └── 22098941d_TianyiZENG.pdf/      # ZENG Tianyi's report
+├── README.md                          # Project documentation
+└── report.pdf                         # Project report (not included in repository)
 ```
 
 ## Setup Instructions
@@ -35,7 +47,7 @@ COMP4423_Project/
    conda activate comp4423
    ```
 
-2. Install dependencies using the [`requirements.txt`](./requirements.txt) file:
+2. Install dependencies using the [`requirements.txt`](./Source%20Code/requirements.txt) file:
    ```bash
    pip install -r requirements.txt
    ```
@@ -60,8 +72,8 @@ COMP4423_Project/
    - Task 2 ideally needs 24+ GB VRAM for default settings (Task2 is done in a single Nvidia RTX 4090)
 
 3. For Task 2, the notebooks should be run in order:
-   - First run [`Task2_Yolo_datasets.ipynb`](./Task2_Yolo_datasets.ipynb) to prepare Yolo formed datasets
-   - Then run [`Task2_finetune+TTA.ipynb`](./Task2_finetune+TTA.ipynb) for model training (fine-tuning) and evaluation
+   - First run [`Task2_Yolo_datasets.ipynb`](./Source%20Code/Task2_Yolo_datasets.ipynb) to prepare Yolo formed datasets
+   - Then run [`Task2_finetune+TTA.ipynb`](./Source%20Code/Task2_finetune+TTA.ipynb) for model training (fine-tuning) and evaluation
 
 ## Important Links
 
