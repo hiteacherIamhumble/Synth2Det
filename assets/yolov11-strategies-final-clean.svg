@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial" font-size="22" text-anchor="middle" font-weight="bold">YOLOv11 Snow Domain Adaptation Strategies</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="50" width="20" height="15" fill="#ffe0b0" />
+  <text x="80" y="63" font-family="Arial" font-size="12">Clear Weather Images</text>
+  
+  <rect x="250" y="50" width="20" height="15" fill="#a8d1f0" />
+  <text x="280" y="63" font-family="Arial" font-size="12">Synthetic Snow Images</text>
+  
+  <rect x="450" y="50" width="20" height="15" fill="#739bd0" />
+  <text x="480" y="63" font-family="Arial" font-size="12">Real Snow Images</text>
+  
+  <rect x="650" y="50" width="20" height="15" fill="#c3e6c3" />
+  <text x="680" y="63" font-family="Arial" font-size="12">Mixed Dataset</text>
+  
+  <!-- Row Labels -->
+  <text x="60" y="120" font-family="Arial" font-size="18" font-weight="bold">Training/Fine-tuning</text>
+  <text x="60" y="350" font-family="Arial" font-size="18" font-weight="bold">Validation</text>
+
+  <!-- Horizontal dividers -->
+  <line x1="50" y1="90" x2="850" y2="90" stroke="#ddd" stroke-width="1" />
+  <line x1="50" y1="320" x2="850" y2="320" stroke="#ddd" stroke-width="1" />
+  <line x1="50" y1="550" x2="850" y2="550" stroke="#ddd" stroke-width="1" />
+  
+  <!-- Baseline Column -->
+  <!-- Baseline Training - N/A -->
+  <rect x="120" y="140" width="160" height="150" rx="10" fill="#f1f3f5" stroke="#ced4da" stroke-width="2" />
+  <text x="200" y="165" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Baseline</text>
+  <text x="200" y="195" font-family="Arial" font-size="14" text-anchor="middle">No Training</text>
+  <text x="200" y="215" font-family="Arial" font-size="14" text-anchor="middle">(Pre-trained YOLOv11m)</text>
+  <text x="200" y="245" font-family="Arial" font-size="14" text-anchor="middle">Dataset: N/A</text>
+  
+  <!-- Baseline Validation -->
+  <rect x="120" y="370" width="160" height="150" rx="10" fill="#f1f3f5" stroke="#ced4da" stroke-width="2" />
+  <text x="200" y="395" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Baseline Validation</text>
+  <text x="200" y="425" font-family="Arial" font-size="14" text-anchor="middle">Resolution: 1920×1080</text>
+  <text x="200" y="450" font-family="Arial" font-size="14" text-anchor="middle">Dataset: Synthetic Snow</text>
+  <rect x="150" y="465" width="100" height="10" fill="#a8d1f0" />
+  <text x="200" y="490" font-family="Arial" font-size="14" text-anchor="middle">No TTA</text>
+  
+  <!-- V1 Column - ENLARGED TRAINING BOX WITH INCREASED HEIGHT -->
+  <!-- V1 Training -->
+  <rect x="350" y="120" width="200" height="200" rx="10" fill="#e9ecef" stroke="#adb5bd" stroke-width="2" />
+  <text x="450" y="145" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">V1 Fine-tuning</text>
+  <text x="450" y="175" font-family="Arial" font-size="14" text-anchor="middle">Resolution: 640×640</text>
+  <text x="450" y="200" font-family="Arial" font-size="14" text-anchor="middle">Epochs: 50</text>
+  <text x="450" y="225" font-family="Arial" font-size="14" text-anchor="middle">Batch Size: 16</text>
+  <text x="450" y="250" font-family="Arial" font-size="14" text-anchor="middle">Default Augmentation</text>
+  <text x="450" y="275" font-family="Arial" font-size="14" text-anchor="middle">Dataset:</text>
+  <text x="450" y="295" font-family="Arial" font-size="14" text-anchor="middle">Synthetic Snow Only</text>
+  <rect x="400" y="305" width="100" height="10" fill="#a8d1f0" />
+  
+  <!-- V1 Validation -->
+  <rect x="370" y="370" width="160" height="150" rx="10" fill="#e9ecef" stroke="#adb5bd" stroke-width="2" />
+  <text x="450" y="395" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">V1 Validation</text>
+  <text x="450" y="425" font-family="Arial" font-size="14" text-anchor="middle">Resolution: 1920×1080</text>
+  <text x="450" y="450" font-family="Arial" font-size="14" text-anchor="middle">Dataset: Synthetic Snow</text>
+  <rect x="400" y="465" width="100" height="10" fill="#a8d1f0" />
+  <text x="450" y="490" font-family="Arial" font-size="14" text-anchor="middle">No TTA</text>
+  
+  <!-- V2 Column -->
+  <!-- V2 Training -->
+  <rect x="585" y="120" width="230" height="190" rx="10" fill="#dee2e6" stroke="#6c757d" stroke-width="2" />
+  <text x="700" y="140" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">V2 Curriculum Fine-tuning</text>
+  
+  <!-- Phase 1 -->
+  <rect x="600" y="150" width="200" height="47" rx="5" fill="#ffe0b0" stroke="#ffc107" stroke-width="1" />
+  <text x="700" y="165" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Phase 1: Warm-up (3 epochs)</text>
+  <text x="700" y="182" font-family="Arial" font-size="12" text-anchor="middle">Clear Images</text>
+  <rect x="650" y="188" width="100" height="7" fill="#ffe0b0" />
+  
+  <!-- Phase 2 -->
+  <rect x="600" y="202" width="200" height="47" rx="5" fill="#c3e6c3" stroke="#28a745" stroke-width="1" />
+  <text x="700" y="217" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Phase 2: Main (40 epochs)</text>
+  <text x="700" y="232" font-family="Arial" font-size="12" text-anchor="middle">Mixed + Extensive Augmentation</text>
+  <rect x="630" y="238" width="40" height="7" fill="#ffe0b0" />
+  <rect x="680" y="238" width="40" height="7" fill="#a8d1f0" />
+  <rect x="730" y="238" width="40" height="7" fill="#739bd0" />
+  
+  <!-- Phase 3 -->
+  <rect x="600" y="254" width="200" height="47" rx="5" fill="#c3e6c3" stroke="#28a745" stroke-width="1" />
+  <text x="700" y="269" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Phase 3: Alignment (10 epochs)</text>
+  <text x="700" y="284" font-family="Arial" font-size="12" text-anchor="middle">Real Data + Simple Augmentation</text>
+  <rect x="650" y="290" width="40" height="7" fill="#ffe0b0" />
+  <rect x="700" y="290" width="40" height="7" fill="#739bd0" />
+  
+  <!-- V2 Validation - ENLARGED BOX -->
+  <rect x="570" y="370" width="260" height="170" rx="10" fill="#dee2e6" stroke="#6c757d" stroke-width="2" />
+  <text x="700" y="395" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">V2 Validation</text>
+  <text x="700" y="425" font-family="Arial" font-size="14" text-anchor="middle">Resolution: 1920×1080</text>
+  <text x="700" y="450" font-family="Arial" font-size="14" text-anchor="middle">Rectangular Training</text>
+  <text x="700" y="475" font-family="Arial" font-size="14" text-anchor="middle">Dataset: Synthetic Snow</text>
+  <rect x="650" y="490" width="100" height="10" fill="#a8d1f0" />
+  
+  <!-- TTA Options -->
+  <rect x="620" y="515" width="70" height="20" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1" />
+  <text x="655" y="528" font-family="Arial" font-size="11" text-anchor="middle">Without TTA</text>
+  
+  <rect x="710" y="515" width="70" height="20" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1" />
+  <text x="745" y="528" font-family="Arial" font-size="11" text-anchor="middle">With TTA</text>
+  
+  <!-- Common Elements for All Models - Fixed spacing -->
+  <text x="200" y="575" font-family="Arial" font-size="12" text-anchor="middle">Resolution: 1920×1080</text>
+  <text x="450" y="575" font-family="Arial" font-size="12" text-anchor="middle">All evaluated with 0.25 confidence</text>
+  <text x="700" y="575" font-family="Arial" font-size="12" text-anchor="middle">V2 used cosine LR scheduler</text>
+</svg>
