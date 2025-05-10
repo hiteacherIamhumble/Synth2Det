@@ -67,7 +67,7 @@ Synth2Det/
    ```
 
 2. Open each notebook and run cells sequentially
-   - Ensure you have sufficient disk space for datasets (~5GB)
+   - Ensure you have sufficient disk space for datasets (~16GB)
    - Task 1 requires a GPU with at least 8GB VRAM (Task1 is done in a single Nvidia L4 ) 
    - Task 2 ideally needs 24+ GB VRAM for default settings (Task2 is done in a single Nvidia RTX 4090)
 
