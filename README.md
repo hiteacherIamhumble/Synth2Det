@@ -83,7 +83,9 @@ Synth2Det/
 
 ### Model & Training Links
 - GitHub Repository: [https://github.com/peterdai/COMP4423_Project](https://github.com/peterdai/COMP4423_Project)
-- Task 1 Model (CycleGAN): [https://wandb.ai/22097845d-the-hong-kong-polytechnic-university/acdc-cyclegan?nw=nwuser22097845d](https://wandb.ai/22097845d-the-hong-kong-polytechnic-university/acdc-cyclegan?nw=nwuser22097845d)
+- Task 1 Model (CycleGAN): 
+   - Best model checkpoints for inference: [https://drive.google.com/file/d/1-I3I9H3G9K6r-3oCdqt8VLyz3S8u4SdO/view?usp=sharing](https://drive.google.com/file/d/1-I3I9H3G9K6r-3oCdqt8VLyz3S8u4SdO/view?usp=sharing)
+   - Training process: [https://wandb.ai/22097845d-the-hong-kong-polytechnic-university/acdc-cyclegan?nw=nwuser22097845d](https://wandb.ai/22097845d-the-hong-kong-polytechnic-university/acdc-cyclegan?nw=nwuser22097845d)
 - Task 2 Models (YOLOv11):
   - Baseline: [https://huggingface.co/Ultralytics/YOLO11/blob/5e0da476eb5def45e8080bd4b92ea63f0b16974c/yolo11m.pt](https://huggingface.co/Ultralytics/YOLO11/blob/5e0da476eb5def45e8080bd4b92ea63f0b16974c/yolo11m.pt)
   - Fine-tuning v1; [https://hub.ultralytics.com/models/sZgJJwYJ5KpXk2sZkAyW](https://hub.ultralytics.com/models/sZgJJwYJ5KpXk2sZkAyW)
